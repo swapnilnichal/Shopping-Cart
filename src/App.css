@@ -28,6 +28,80 @@
   color: #61dafb;
 }
 
+/* header related css */
+.brand-logo{
+  position: absolute;
+  left: 30px;
+}
+.cart-count{
+  background-color: aqua;
+  padding: 6px 6px;
+  border-radius: 50%;
+  color: #ffff;
+  position: absolute;
+  top:10px;
+  right:30px;
+}
+
+/* product related css */
+.card-price {
+  font-size: 16px;
+  color: orangered;
+}
+.add-to-cart-btn{
+  position: absolute;
+  top:210px;
+  right:15px;
+  width: 60px;
+  height: 55px;
+  background-color: orange;
+  border: 0px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#add-icon{
+  margin-top: 5px;
+}
+
+/* cart related css  */
+.bill{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.bill-price{
+  color: orange;
+}
+.summary{
+  margin-bottom: 16px;
+  color: blue;
+  font-weight:bold;
+}
+.chekout{
+  /* min-width: 320px; */
+}
+.cart-product-img{
+  width: 80px;
+  height: 80px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  position: absolute;
+  left: 40px;
+}
+.qty-add-minus-div{
+  height: 50px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.Plus-btn ,.minus-btn{
+  background-color: rgb(96 96 245 / 50%);
+}
+
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

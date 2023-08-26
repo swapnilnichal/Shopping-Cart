@@ -3,10 +3,11 @@ import Header from "./Header";
 // redux related
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchProduct} from '../Redux/Slice/product';
-import {addToCart} from '../Redux/Slice/product'
+import {addToCart,addToFav} from '../Redux/Slice/product'
 //
 
     const ProductPage = () => {
+
         const dispatch = useDispatch();
         const state = useSelector((state) => state);
         console.log("state", state);
@@ -33,6 +34,7 @@ import {addToCart} from '../Redux/Slice/product'
                                     <div className="card-content">
                                         <span className="card-title" style={{ fontSize: "20px", color: "black", marginTop: "10px" }}>{e.title}</span>
                                         <button className='add-to-cart-btn' onClick={() => dispatch(addToCart(e))}><i className="small material-icons" id='add-icon'>add</i></button>
+                                        <span className="add-to-fav" onClick={() => dispatch(addToFav(e))}><i className="small material-icons">favorite</i></span>
                                         <p className='card-price'>$ {e.price}</p>
                                     </div>
                                 </div>

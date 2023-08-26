@@ -3,6 +3,7 @@ import {BrowserRouter,Routes, Route} from 'react-router-dom'
 import './App.css';
 import CartPage from './Components/CartPage';
 import ProductPage from './Components/Productpage';
+import Favorite from './Components/Favorite';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
        <Routes>
           <Route exact path='/' element={<ProductPage/>} />
           <Route path='/cart' element={<CartPage/>} />
+          <Route path='/favorite' element={<Favorite/>} />
        </Routes>
     </div>
     </BrowserRouter>

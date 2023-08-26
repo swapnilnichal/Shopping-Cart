@@ -14,6 +14,7 @@ const productSlice = createSlice({
        data: null,
        isError: false,
        cart:[],
+       fav:[],
        totalQty: 0,
        totalPrice:0,
     },
@@ -38,6 +39,15 @@ const productSlice = createSlice({
           }else{
             const newProduct = { ...action.payload, quantity: 1 };
             state.cart.push(newProduct);
+          }
+        },
+        addToFav: (state,action)=>{
+          let find = state.fav.findIndex((item)=> item.id === action.payload.id);
+          if(find >= 0){
+            state.fav = state.fav.filter((item)=> item.id !== action.payload.id);
+          }else{
+            const favorite = { ...action.payload};
+            state.fav.push(favorite);
           }
         },
         getCartTotal:(state)=>{
@@ -79,5 +89,5 @@ const productSlice = createSlice({
     },
 });
 
-export const {addToCart,getCartTotal,removeItem,increaseQty,decreaseQty} = productSlice.actions;
+export const {addToCart,addToFav,getCartTotal,removeItem,increaseQty,decreaseQty} = productSlice.actions;
 export default productSlice.reducer;

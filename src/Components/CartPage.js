@@ -33,13 +33,15 @@ const CartPage = () => {
                         </div>                          
                         </div>
                         </div>
-                        <div className="col s4">
+                        <div className="col s2">
                            <div className="qty-add-minus-div">
                                <button className="Plus-btn" onClick={()=>dispatch(increaseQty(item.id))}><i className="material-icons" style={{fontSize:"18px",color:"white"}}>add</i></button>
                                <input type="text" style={{width :"60px",margin:"0 10px"}} value={item.quantity}></input>
                                <button className="minus-btn" onClick={()=>dispatch(decreaseQty(item.id))}><i className="material-icons" style={{fontSize:"18px",color:"white"}}>remove</i></button>
-                               <div className="bill-price" style={{margin:"20px 20px"}}>$ {item.price}</div>
                             </div>
+                        </div>
+                        <div className="col s2">
+                        <div className="bill-price" style={{margin:"20px 0"}}>$ {item.price}</div>                           
                         </div>
                       </div>
                     </li>

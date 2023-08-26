@@ -51,7 +51,7 @@
 .add-to-cart-btn{
   position: absolute;
   top:210px;
-  right:15px;
+  left:15px;
   width: 60px;
   height: 55px;
   background-color: orange;
@@ -61,6 +61,12 @@
 }
 #add-icon{
   margin-top: 5px;
+}
+.add-to-fav {
+  position: absolute;
+  bottom:25px;
+  right:15px;
+  cursor: pointer;
 }
 
 /* cart related css  */
@@ -96,6 +102,9 @@
 }
 .Plus-btn ,.minus-btn{
   background-color: rgb(96 96 245 / 50%);
+}
+.qty-add-minus-div input {
+  text-align: center;
 }
 
 

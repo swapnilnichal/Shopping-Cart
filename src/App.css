@@ -68,6 +68,9 @@
   right:15px;
   cursor: pointer;
 }
+#heartBtn{
+  color:red;
+}
 
 /* cart related css  */
 .bill{
